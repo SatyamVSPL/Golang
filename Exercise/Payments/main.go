@@ -135,9 +135,7 @@ func writeLogs(p PaymentProcess, amount float64){
 		os.Exit(1)
 	}
 	defer logFile.Close()
-	// str := strconv.FormatFloat(getBalance(), 'f', -1, 64)
-	logger := log.New(logFile, "", log.LstdFlags)
-	// logger.Println("Balance in account : "+str)
+	
 	
 	message, status := p.pay(amount)
 	if *status!= true{
@@ -146,8 +144,10 @@ func writeLogs(p PaymentProcess, amount float64){
 	}
 	fmt.Println("Log saved")
 	fmt.Println(message,"\n")
-	// logger := log.New(logFile, "", log.LstdFlags)
+	logger := log.New(logFile, "", log.LstdFlags)
 	logger.Println(message)
+	str := strconv.FormatFloat(getBalance(), 'f', -1, 64)
+	logger.Println("Balance in account : "+str)
 	// logError(message)
 }
 
@@ -167,15 +167,15 @@ func logError(msg string) {
 func main() {
 	fmt.Println("Accont balance :",getBalance(),"\n")
 
-	logFile , logErr := os.OpenFile("data.log" , os.O_RDWR|os.O_CREATE | os.O_APPEND, 0666)
-	if logErr != nil {
-		fmt.Println("Log file Error : ",logErr)
-		os.Exit(1)
-	}
-	defer logFile.Close()
-	str := strconv.FormatFloat(getBalance(), 'f', -1, 64)
-	logger := log.New(logFile, "", log.LstdFlags)
-	logger.Println("Balance in account : "+str)
+	// logFile , logErr := os.OpenFile("data.log" , os.O_RDWR|os.O_CREATE | os.O_APPEND, 0666)
+	// if logErr != nil {
+	// 	fmt.Println("Log file Error : ",logErr)
+	// 	os.Exit(1)
+	// }
+	// defer logFile.Close()
+	// str := strconv.FormatFloat(getBalance(), 'f', -1, 64)
+	// logger := log.New(logFile, "", log.LstdFlags)
+	// logger.Println("Balance in account : "+str)
 	
 	satyam := gpay{
 		name : "satyam",

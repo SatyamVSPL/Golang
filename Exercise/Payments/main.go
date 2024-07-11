@@ -86,7 +86,7 @@ func updateBalance(m float64) *bool {
 
 	writeErr := os.WriteFile("balance.txt", []byte(str), 0666)
 	if convertErr != nil {
-		fmt.Println("Server Down :", writeErr)
+		fmt.Println("Conversion Error :", writeErr)
 		logError("issue while upating balance")
 		os.Exit(1)
 	} else {

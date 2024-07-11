@@ -125,6 +125,12 @@ func (c creditCard) pay(f float64) (string, *bool) {
 
 // "Method which wites to log after payment"
 func writeLogs(p PaymentProcess, amount float64) {
+
+	if amount <= 0 {
+		logError("Unvalid amount")
+		os.Exit(1)
+	}
+
 	logFile, logErr := os.OpenFile("data.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if logErr != nil {
 		fmt.Println("Log file Error : ", logErr)

@@ -1,5 +1,11 @@
-2024/07/11 17:09:06 100/- amount send via Gpay, paid by satyam
-2024/07/11 17:09:06 Balance in account : 700
-2024/07/11 17:09:38 700/- amount send via Gpay, paid by satyam
-2024/07/11 17:09:38 Balance in account : 0
-2024/07/11 17:09:45 ERROR: Out of balance
+2024/07/11 17:33:29 34/- amount send via Gpay, paid by satyam
+2024/07/11 17:33:29 Balance in account : 642
+2024/07/11 17:39:43 -100/- amount send via Gpay, paid by satyam
+2024/07/11 17:39:43 Balance in account : 742
+2024/07/11 17:42:45 ERROR: Unvalid amount
+2024/07/11 17:42:45 -9/- amount send via Gpay, paid by satyam
+2024/07/11 17:42:45 Balance in account : 751
+2024/07/11 17:43:05 ERROR: Unvalid amount
+2024/07/11 17:43:18 51/- amount send via Gpay, paid by satyam
+2024/07/11 17:43:18 Balance in account : 700
+2024/07/11 17:43:35 ERROR: Unvalid amount

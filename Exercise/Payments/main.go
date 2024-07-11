@@ -150,6 +150,7 @@ func writeLogs(p PaymentProcess, amount float64) {
 	logger.Println(message)
 	str := strconv.FormatFloat(getBalance(), 'f', -1, 64)
 	logger.Println("Balance in account : " + str)
+	*status = false
 	// logError(message)
 }
 

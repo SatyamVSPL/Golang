@@ -127,7 +127,8 @@ func (c creditCard) pay(f float64) (string, *bool) {
 func writeLogs(p PaymentProcess, amount float64) {
 
 	if amount <= 0 {
-		logError("Unvalid amount")
+		logError("Invalid amount")
+		fmt.Println("Invalid amount0")
 		os.Exit(1)
 	}
 
